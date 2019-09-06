@@ -1,0 +1,9 @@
+##YAML Template
+
+#REPORTS
+
+---
+default: --format pretty -p json
+
+html: --format html --out=reports/report.html
+json: --format json --out=reports/report.json

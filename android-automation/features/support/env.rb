@@ -1,0 +1,6 @@
+require 'appium_lib'
+require 'appium_console'
+require 'cucumber'
+require 'pry'
+require 'report_builder'
+require 'rspec/expectations'

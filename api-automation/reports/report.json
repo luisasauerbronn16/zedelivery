@@ -1,0 +1,705 @@
+[
+  {
+    "uri": "features/specs/weather.feature",
+    "id": "weather",
+    "keyword": "Funcionalidade",
+    "name": "Weather",
+    "description": "    Sendo usuário do Open Weather \n    Posso fazer buscas de cidades\n    Para saber o clima",
+    "line": 5,
+    "tags": [
+      {
+        "name": "@weather",
+        "line": 4
+      }
+    ],
+    "comments": [
+      {
+        "value": "#enconding: utf-8",
+        "line": 2
+      }
+    ],
+    "elements": [
+      {
+        "id": "weather;buscar-cidade-pelo-nome",
+        "keyword": "Cenário",
+        "name": "Buscar cidade pelo nome",
+        "description": "",
+        "line": 10,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@weather",
+            "line": 4
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 32000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "que faço um GET na API weather com os dados abaixo:",
+            "line": 11,
+            "rows": [
+              {
+                "cells": [
+                  "q",
+                  "London,uk"
+                ]
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/weather.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1293839000
+            }
+          },
+          {
+            "keyword": "Quando ",
+            "name": "o código de resposta HTTP é igual a \"200\"",
+            "line": 15,
+            "match": {
+              "location": "features/step_definitions/weather.rb:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1645000
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "o body de resposta deve conter 12 atributos",
+            "line": 16,
+            "match": {
+              "location": "features/step_definitions/weather.rb:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 205000
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "vejo as informaçoes sobre o clima",
+            "line": 17,
+            "output": [
+              "Cidade: London",
+              "Clima: [{\"id\"=>300, \"main\"=>\"Drizzle\", \"description\"=>\"light intensity drizzle\", \"icon\"=>\"09d\"}]"
+            ],
+            "match": {
+              "location": "features/step_definitions/weather.rb:43"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 68000
+            }
+          }
+        ]
+      },
+      {
+        "id": "weather;buscar-cidade-por-id",
+        "keyword": "Cenário",
+        "name": "Buscar cidade por ID",
+        "description": "",
+        "line": 19,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@weather",
+            "line": 4
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 18000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "que faço um GET na API weather com os dados abaixo:",
+            "line": 20,
+            "rows": [
+              {
+                "cells": [
+                  "id",
+                  "2172797"
+                ]
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/weather.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1099095000
+            }
+          },
+          {
+            "keyword": "Quando ",
+            "name": "o código de resposta HTTP é igual a \"200\"",
+            "line": 24,
+            "match": {
+              "location": "features/step_definitions/weather.rb:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 66000
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "o body de resposta deve conter 12 atributos",
+            "line": 25,
+            "match": {
+              "location": "features/step_definitions/weather.rb:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 123000
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "vejo as informaçoes sobre o clima",
+            "line": 26,
+            "output": [
+              "Cidade: Cairns",
+              "Clima: [{\"id\"=>802, \"main\"=>\"Clouds\", \"description\"=>\"scattered clouds\", \"icon\"=>\"03n\"}]"
+            ],
+            "match": {
+              "location": "features/step_definitions/weather.rb:43"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 72000
+            }
+          }
+        ]
+      },
+      {
+        "id": "weather;buscar-cidade-por-coordenadas",
+        "keyword": "Cenário",
+        "name": "Buscar cidade por coordenadas",
+        "description": "",
+        "line": 28,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@weather",
+            "line": 4
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 17000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "que faço um GET na API weather com os dados abaixo:",
+            "line": 29,
+            "rows": [
+              {
+                "cells": [
+                  "lat",
+                  "35"
+                ]
+              },
+              {
+                "cells": [
+                  "lon",
+                  "139"
+                ]
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/weather.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1225595000
+            }
+          },
+          {
+            "keyword": "Quando ",
+            "name": "o código de resposta HTTP é igual a \"200\"",
+            "line": 34,
+            "match": {
+              "location": "features/step_definitions/weather.rb:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 70000
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "o body de resposta deve conter 11 atributos",
+            "line": 35,
+            "match": {
+              "location": "features/step_definitions/weather.rb:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 156000
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "vejo as informaçoes sobre o clima",
+            "line": 36,
+            "output": [
+              "Cidade: Tawarano",
+              "Clima: [{\"id\"=>800, \"main\"=>\"Clear\", \"description\"=>\"clear sky\", \"icon\"=>\"01n\"}]"
+            ],
+            "match": {
+              "location": "features/step_definitions/weather.rb:43"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 73000
+            }
+          }
+        ]
+      },
+      {
+        "id": "weather;buscar-cidade-por-zip-code",
+        "keyword": "Cenário",
+        "name": "Buscar cidade por zip code",
+        "description": "",
+        "line": 38,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@weather",
+            "line": 4
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "que faço um GET na API weather com os dados abaixo:",
+            "line": 39,
+            "rows": [
+              {
+                "cells": [
+                  "zip",
+                  "94040,us"
+                ]
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/weather.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1123513000
+            }
+          },
+          {
+            "keyword": "Quando ",
+            "name": "o código de resposta HTTP é igual a \"200\"",
+            "line": 43,
+            "match": {
+              "location": "features/step_definitions/weather.rb:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 68000
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "o body de resposta deve conter 12 atributos",
+            "line": 44,
+            "match": {
+              "location": "features/step_definitions/weather.rb:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 116000
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "vejo as informaçoes sobre o clima",
+            "line": 45,
+            "output": [
+              "Cidade: Mountain View",
+              "Clima: [{\"id\"=>500, \"main\"=>\"Rain\", \"description\"=>\"light rain\", \"icon\"=>\"10d\"}]"
+            ],
+            "match": {
+              "location": "features/step_definitions/weather.rb:43"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 92000
+            }
+          }
+        ]
+      },
+      {
+        "id": "weather;buscar-cidades-dentro-de-uma-área",
+        "keyword": "Cenário",
+        "name": "Buscar cidades dentro de uma área",
+        "description": "",
+        "line": 47,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@weather",
+            "line": 4
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "que faço um GET na API box com os dados abaixo:",
+            "line": 48,
+            "rows": [
+              {
+                "cells": [
+                  "bbox",
+                  "12,32,15,37,10"
+                ]
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/weather.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1226463000
+            }
+          },
+          {
+            "keyword": "Quando ",
+            "name": "o código de resposta HTTP é igual a \"200\"",
+            "line": 52,
+            "match": {
+              "location": "features/step_definitions/weather.rb:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 107000
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "o body de resposta deve conter 4 atributos",
+            "line": 53,
+            "match": {
+              "location": "features/step_definitions/weather.rb:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 335000
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "vejo as informaçoes sobre o clima",
+            "line": 54,
+            "output": [
+              "Cidade: Yafran",
+              "Clima: [{\"id\"=>500, \"main\"=>\"Rain\", \"description\"=>\"light rain\", \"icon\"=>\"10d\"}]",
+              "Cidade: Zuwarah",
+              "Clima: [{\"id\"=>803, \"main\"=>\"Clouds\", \"description\"=>\"broken clouds\", \"icon\"=>\"04d\"}]",
+              "Cidade: Sabratah",
+              "Clima: [{\"id\"=>804, \"main\"=>\"Clouds\", \"description\"=>\"overcast clouds\", \"icon\"=>\"04d\"}]",
+              "Cidade: Gharyan",
+              "Clima: [{\"id\"=>500, \"main\"=>\"Rain\", \"description\"=>\"light rain\", \"icon\"=>\"10d\"}]",
+              "Cidade: Zawiya",
+              "Clima: [{\"id\"=>802, \"main\"=>\"Clouds\", \"description\"=>\"scattered clouds\", \"icon\"=>\"03d\"}]",
+              "Cidade: Tripoli",
+              "Clima: [{\"id\"=>802, \"main\"=>\"Clouds\", \"description\"=>\"scattered clouds\", \"icon\"=>\"03d\"}]",
+              "Cidade: Tarhuna",
+              "Clima: [{\"id\"=>802, \"main\"=>\"Clouds\", \"description\"=>\"scattered clouds\", \"icon\"=>\"03d\"}]",
+              "Cidade: Masallatah",
+              "Clima: [{\"id\"=>500, \"main\"=>\"Rain\", \"description\"=>\"light rain\", \"icon\"=>\"10d\"}]",
+              "Cidade: Al Khums",
+              "Clima: [{\"id\"=>804, \"main\"=>\"Clouds\", \"description\"=>\"overcast clouds\", \"icon\"=>\"04d\"}]",
+              "Cidade: Zlitan",
+              "Clima: [{\"id\"=>804, \"main\"=>\"Clouds\", \"description\"=>\"overcast clouds\", \"icon\"=>\"04d\"}]",
+              "Cidade: Birkirkara",
+              "Clima: [{\"id\"=>802, \"main\"=>\"Clouds\", \"description\"=>\"scattered clouds\", \"icon\"=>\"03d\"}]",
+              "Cidade: Ragusa",
+              "Clima: [{\"id\"=>801, \"main\"=>\"Clouds\", \"description\"=>\"few clouds\", \"icon\"=>\"02d\"}]",
+              "Cidade: Pozzallo",
+              "Clima: [{\"id\"=>801, \"main\"=>\"Clouds\", \"description\"=>\"few clouds\", \"icon\"=>\"02d\"}]",
+              "Cidade: Modica",
+              "Clima: [{\"id\"=>802, \"main\"=>\"Clouds\", \"description\"=>\"scattered clouds\", \"icon\"=>\"03d\"}]",
+              "Cidade: Rosolini",
+              "Clima: [{\"id\"=>802, \"main\"=>\"Clouds\", \"description\"=>\"scattered clouds\", \"icon\"=>\"03d\"}]"
+            ],
+            "match": {
+              "location": "features/step_definitions/weather.rb:43"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 214000
+            }
+          }
+        ]
+      },
+      {
+        "id": "weather;buscar-cidades-ao-redor",
+        "keyword": "Cenário",
+        "name": "Buscar cidades ao redor",
+        "description": "",
+        "line": 56,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@weather",
+            "line": 4
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "que faço um GET na API find com os dados abaixo:",
+            "line": 57,
+            "rows": [
+              {
+                "cells": [
+                  "lat",
+                  "55.5"
+                ]
+              },
+              {
+                "cells": [
+                  "lon",
+                  "37.5"
+                ]
+              },
+              {
+                "cells": [
+                  "cnt",
+                  "10"
+                ]
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/weather.rb:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1224887000
+            }
+          },
+          {
+            "keyword": "Quando ",
+            "name": "o código de resposta HTTP é igual a \"200\"",
+            "line": 63,
+            "match": {
+              "location": "features/step_definitions/weather.rb:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 71000
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "o body de resposta deve conter 4 atributos",
+            "line": 64,
+            "match": {
+              "location": "features/step_definitions/weather.rb:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 221000
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "vejo as informaçoes sobre o clima",
+            "line": 65,
+            "output": [
+              "Cidade: Newtonhill",
+              "Clima: [{\"id\"=>311, \"main\"=>\"Drizzle\", \"description\"=>\"rain and drizzle\", \"icon\"=>\"09d\"}]",
+              "Cidade: Stonehaven",
+              "Clima: [{\"id\"=>311, \"main\"=>\"Drizzle\", \"description\"=>\"rain and drizzle\", \"icon\"=>\"09d\"}]",
+              "Cidade: Portlethen",
+              "Clima: [{\"id\"=>311, \"main\"=>\"Drizzle\", \"description\"=>\"rain and drizzle\", \"icon\"=>\"09d\"}]"
+            ],
+            "match": {
+              "location": "features/step_definitions/weather.rb:43"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 152000
+            }
+          }
+        ]
+      },
+      {
+        "id": "weather;buscar-mais-de-uma-cidade",
+        "keyword": "Cenário",
+        "name": "Buscar mais de uma cidade",
+        "description": "",
+        "line": 67,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@weather",
+            "line": 4
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "que faço um GET na API group com os dados abaixo:",
+            "line": 68,
+            "rows": [
+              {
+                "cells": [
+                  "id",
+                  "524901"
+                ]
+              },
+              {
+                "cells": [
+                  "id",
+                  "703448"
+                ]
+              },
+              {
+                "cells": [
+                  "id",
+                  "2643743"
+                ]
+              },
+              {
+                "cells": [
+                  "units",
+                  "metric"
+                ]
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/weather.rb:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1224279000
+            }
+          },
+          {
+            "keyword": "Quando ",
+            "name": "o código de resposta HTTP é igual a \"200\"",
+            "line": 75,
+            "match": {
+              "location": "features/step_definitions/weather.rb:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 74000
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "o body de resposta deve conter 2 atributos",
+            "line": 76,
+            "match": {
+              "location": "features/step_definitions/weather.rb:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 176000
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "vejo as informaçoes sobre o clima",
+            "line": 77,
+            "output": [
+              "Cidade: Moscow",
+              "Clima: [{\"id\"=>800, \"main\"=>\"Clear\", \"description\"=>\"clear sky\", \"icon\"=>\"01n\"}]",
+              "Cidade: Kiev",
+              "Clima: [{\"id\"=>800, \"main\"=>\"Clear\", \"description\"=>\"clear sky\", \"icon\"=>\"01n\"}]",
+              "Cidade: London",
+              "Clima: [{\"id\"=>701, \"main\"=>\"Mist\", \"description\"=>\"mist\", \"icon\"=>\"50d\"}, {\"id\"=>300, \"main\"=>\"Drizzle\", \"description\"=>\"light intensity drizzle\", \"icon\"=>\"09d\"}]"
+            ],
+            "match": {
+              "location": "features/step_definitions/weather.rb:43"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 116000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

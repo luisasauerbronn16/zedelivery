@@ -1,0 +1,142 @@
+[
+  {
+    "uri": "features/specs/cadastro.feature",
+    "id": "realizar-pedido",
+    "keyword": "Funcionalidade",
+    "name": "Realizar pedido",
+    "description": "    Sendo um usuário do Zé Delivery\n    Posso realizar um pedido\n    Para que eu receba os produtos no meu local",
+    "line": 3,
+    "elements": [
+      {
+        "id": "realizar-pedido;realizar-pedido-iniciando-cadastro",
+        "keyword": "Cenário",
+        "name": "Realizar pedido iniciando cadastro",
+        "description": "",
+        "line": 8,
+        "type": "scenario",
+        "before": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 34836000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "que acesso o aplicativo",
+            "line": 9,
+            "match": {
+              "location": "features/step_definitions/cadastro.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 51424460000
+            }
+          },
+          {
+            "keyword": "Quando ",
+            "name": "realizo o cadastro com os dados abaixo",
+            "line": 10,
+            "rows": [
+              {
+                "cells": [
+                  "nome",
+                  "Luisa Freire"
+                ]
+              },
+              {
+                "cells": [
+                  "email",
+                  "luisa123asbcs@gmail.com"
+                ]
+              },
+              {
+                "cells": [
+                  "senha",
+                  "abcdefsg8"
+                ]
+              },
+              {
+                "cells": [
+                  "cpf",
+                  "38482520822"
+                ]
+              },
+              {
+                "cells": [
+                  "telefone",
+                  "11888888888"
+                ]
+              },
+              {
+                "cells": [
+                  "idade",
+                  "29 anos"
+                ]
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/cadastro.rb:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 27148903000
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "busco o endereço 'Rua Pedro Jacobucci, 330'",
+            "line": 19,
+            "match": {
+              "location": "features/step_definitions/cadastro.rb:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13787430000
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "seleciono o produto 'Colorado Cauim 310ml'",
+            "line": 20,
+            "match": {
+              "location": "features/step_definitions/cadastro.rb:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 34119999000
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "finalizo meu pedido",
+            "line": 21,
+            "match": {
+              "location": "features/step_definitions/cadastro.rb:56"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 76000
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:43"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2454817000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,193 @@
+[
+  {
+    "uri": "features/specs/pedidos.feature",
+    "id": "realizar-pedido",
+    "keyword": "Funcionalidade",
+    "name": "Realizar pedido",
+    "description": "    Sendo um usuário do Zé Delivery\n    Posso realizar um pedido\n    Para que eu receba os produtos no meu local",
+    "line": 3,
+    "elements": [
+      {
+        "id": "realizar-pedido;realizar-pedido-sem-cadastro",
+        "keyword": "Cenário",
+        "name": "Realizar pedido sem cadastro",
+        "description": "",
+        "line": 8,
+        "type": "scenario",
+        "before": [
+          {
+            "match": {
+              "location": "capybara-3.29.0/lib/capybara/cucumber.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 50000
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.29.0/lib/capybara/cucumber.rb:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 19000
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/hooks.rb:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "que acesso o site do Zé",
+            "line": 9,
+            "match": {
+              "location": "features/step_definitions/pedidos.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5910369000
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "tenho mais de 18 anos",
+            "line": 10,
+            "match": {
+              "location": "features/step_definitions/pedidos.rb:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 103440000
+            }
+          },
+          {
+            "keyword": "Quando ",
+            "name": "busco o endereço 'Rua Pedro Jacobucci, 330'",
+            "line": 11,
+            "match": {
+              "location": "features/step_definitions/pedidos.rb:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16795676000
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "seleciono o produto 'Colorado Cauim 310ml - Unidade'",
+            "line": 12,
+            "match": {
+              "location": "features/step_definitions/pedidos.rb:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7112360000
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "realizo o meu cadastro com os dados abaixo",
+            "line": 13,
+            "rows": [
+              {
+                "cells": [
+                  "nome",
+                  "Luisa Freire"
+                ]
+              },
+              {
+                "cells": [
+                  "email",
+                  "luisasauer123@gmail.com"
+                ]
+              },
+              {
+                "cells": [
+                  "senha",
+                  "abcdefg8"
+                ]
+              },
+              {
+                "cells": [
+                  "cpf",
+                  "38482520822"
+                ]
+              },
+              {
+                "cells": [
+                  "telefone",
+                  "11777777777"
+                ]
+              },
+              {
+                "cells": [
+                  "dia_nasc",
+                  "16"
+                ]
+              },
+              {
+                "cells": [
+                  "mes_nasc",
+                  "Set"
+                ]
+              },
+              {
+                "cells": [
+                  "ano_nasc",
+                  "1989"
+                ]
+              }
+            ],
+            "match": {
+              "location": "features/step_definitions/pedidos.rb:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4041201000
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "finalizo meu pedido",
+            "line": 24,
+            "match": {
+              "location": "features/step_definitions/pedidos.rb:57"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 55000
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2004446000
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.29.0/lib/capybara/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 103560000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

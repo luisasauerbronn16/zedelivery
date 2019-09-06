@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Zé - Automation API Results</title><link rel="icon" href="https://reportbuilder.rajatthareja.com/rb.ico">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" media="screen,projection"/>
+<link href="https://cdn.rawgit.com/rajatthareja/ReportBuilder/v1.8/css/report.builder.min.css" rel="stylesheet">
+</head><body>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script><header class="brown lighten-5">
+<div class="row brown lighten-1">
+<div class="col m6 hide-on-small-only">
+<h5 class="truncate white-text tooltipped" data-tooltip="Zé - Automation API Results">Zé - Automation API Results</h5>
+</div><div class="col m6 s12 brown lighten-1">
+<ul class="tabs brown lighten-1 row" style="overflow-x: hidden">
+<li class="tab col s3">
+<a class="brown lighten-3 active blue-text waves-effect waves-light tooltipped" data-tooltip="Results Overview" href="#overview"><i class="material-icons">assessment</i> Overview</a>
+</li>
+<li class="tab col s3">
+<a class="brown lighten-3 white-text waves-effect waves-light tooltipped" data-tooltip="Scenarios by Features" href="#features"><i class="material-icons">view_headline</i> Features</a>
+</li>
+<li class="tab col s3">
+<a class="brown lighten-3 white-text waves-effect waves-light tooltipped" data-tooltip="Scenarios Summary Table" href="#summary"><i class="material-icons">view_comfy</i> Summary</a>
+</li>
+<li class="tab col s3">
+<a class="brown lighten-3 white-text waves-effect waves-light tooltipped" data-tooltip="Failed Scenarios" href="#errors"><i class="material-icons">bug_report</i> Errors</a>
+</li>
+</ul>
+</div>
+</div>
+</header>
+<div id="g0f0s0" class="modal modal-fixed-footer">
+<div class="modal-content"><div class="chip"><i class="material-icons rotate-45">label</i>@weather</div><h5>Buscar cidade pelo nome (1.296s)</h5>
+features/specs/weather.feature:10
+<ul class="collection stepList"><li class="collection-item step passed">
+<b>Dado </b> que faço um GET na API weather com os dados abaixo: (1.294s)<br/>| q | London,uk | 
+</li>
+<li class="collection-item step passed">
+<b>Quando </b> o código de resposta HTTP é igual a &quot;200&quot; (0.002s)</li>
+<li class="collection-item step passed">
+<b>Então </b> o body de resposta deve conter 12 atributos (0.000s)</li>
+<li class="collection-item step passed">
+<b>E </b> vejo as informaçoes sobre o clima (0.000s)<pre>Cidade: London</pre><pre>Clima: [{"id"=>300, "main"=>"Drizzle", "description"=>"light intensity drizzle", "icon"=>"09d"}]</pre></li>
+</ul>
+</div><div class="modal-footer">
+<span class="modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons">close</i></span>
+</div>
+</div><div id="g0f0s1" class="modal modal-fixed-footer">
+<div class="modal-content"><div class="chip"><i class="material-icons rotate-45">label</i>@weather</div><h5>Buscar cidade por ID (1.099s)</h5>
+features/specs/weather.feature:19
+<ul class="collection stepList"><li class="collection-item step passed">
+<b>Dado </b> que faço um GET na API weather com os dados abaixo: (1.099s)<br/>| id | 2172797 | 
+</li>
+<li class="collection-item step passed">
+<b>Quando </b> o código de resposta HTTP é igual a &quot;200&quot; (0.000s)</li>
+<li class="collection-item step passed">
+<b>Então </b> o body de resposta deve conter 12 atributos (0.000s)</li>
+<li class="collection-item step passed">
+<b>E </b> vejo as informaçoes sobre o clima (0.000s)<pre>Cidade: Cairns</pre><pre>Clima: [{"id"=>802, "main"=>"Clouds", "description"=>"scattered clouds", "icon"=>"03n"}]</pre></li>
+</ul>
+</div><div class="modal-footer">
+<span class="modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons">close</i></span>
+</div>
+</div><div id="g0f0s2" class="modal modal-fixed-footer">
+<div class="modal-content"><div class="chip"><i class="material-icons rotate-45">label</i>@weather</div><h5>Buscar cidade por coordenadas (1.226s)</h5>
+features/specs/weather.feature:28
+<ul class="collection stepList"><li class="collection-item step passed">
+<b>Dado </b> que faço um GET na API weather com os dados abaixo: (1.226s)<br/>| lat | 35 | 
+<br/>| lon | 139 | 
+</li>
+<li class="collection-item step passed">
+<b>Quando </b> o código de resposta HTTP é igual a &quot;200&quot; (0.000s)</li>
+<li class="collection-item step passed">
+<b>Então </b> o body de resposta deve conter 11 atributos (0.000s)</li>
+<li class="collection-item step passed">
+<b>E </b> vejo as informaçoes sobre o clima (0.000s)<pre>Cidade: Tawarano</pre><pre>Clima: [{"id"=>800, "main"=>"Clear", "description"=>"clear sky", "icon"=>"01n"}]</pre></li>
+</ul>
+</div><div class="modal-footer">
+<span class="modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons">close</i></span>
+</div>
+</div><div id="g0f0s3" class="modal modal-fixed-footer">
+<div class="modal-content"><div class="chip"><i class="material-icons rotate-45">label</i>@weather</div><h5>Buscar cidade por zip code (1.124s)</h5>
+features/specs/weather.feature:38
+<ul class="collection stepList"><li class="collection-item step passed">
+<b>Dado </b> que faço um GET na API weather com os dados abaixo: (1.124s)<br/>| zip | 94040,us | 
+</li>
+<li class="collection-item step passed">
+<b>Quando </b> o código de resposta HTTP é igual a &quot;200&quot; (0.000s)</li>
+<li class="collection-item step passed">
+<b>Então </b> o body de resposta deve conter 12 atributos (0.000s)</li>
+<li class="collection-item step passed">
+<b>E </b> vejo as informaçoes sobre o clima (0.000s)<pre>Cidade: Mountain View</pre><pre>Clima: [{"id"=>500, "main"=>"Rain", "description"=>"light rain", "icon"=>"10d"}]</pre></li>
+</ul>
+</div><div class="modal-footer">
+<span class="modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons">close</i></span>
+</div>
+</div><div id="g0f0s4" class="modal modal-fixed-footer">
+<div class="modal-content"><div class="chip"><i class="material-icons rotate-45">label</i>@weather</div><h5>Buscar cidades dentro de uma área (1.227s)</h5>
+features/specs/weather.feature:47
+<ul class="collection stepList"><li class="collection-item step passed">
+<b>Dado </b> que faço um GET na API box com os dados abaixo: (1.226s)<br/>| bbox | 12,32,15,37,10 | 
+</li>
+<li class="collection-item step passed">
+<b>Quando </b> o código de resposta HTTP é igual a &quot;200&quot; (0.000s)</li>
+<li class="collection-item step passed">
+<b>Então </b> o body de resposta deve conter 4 atributos (0.000s)</li>
+<li class="collection-item step passed">
+<b>E </b> vejo as informaçoes sobre o clima (0.000s)<pre>Cidade: Yafran</pre><pre>Clima: [{"id"=>500, "main"=>"Rain", "description"=>"light rain", "icon"=>"10d"}]</pre><pre>Cidade: Zuwarah</pre><pre>Clima: [{"id"=>803, "main"=>"Clouds", "description"=>"broken clouds", "icon"=>"04d"}]</pre><pre>Cidade: Sabratah</pre><pre>Clima: [{"id"=>804, "main"=>"Clouds", "description"=>"overcast clouds", "icon"=>"04d"}]</pre><pre>Cidade: Gharyan</pre><pre>Clima: [{"id"=>500, "main"=>"Rain", "description"=>"light rain", "icon"=>"10d"}]</pre><pre>Cidade: Zawiya</pre><pre>Clima: [{"id"=>802, "main"=>"Clouds", "description"=>"scattered clouds", "icon"=>"03d"}]</pre><pre>Cidade: Tripoli</pre><pre>Clima: [{"id"=>802, "main"=>"Clouds", "description"=>"scattered clouds", "icon"=>"03d"}]</pre><pre>Cidade: Tarhuna</pre><pre>Clima: [{"id"=>802, "main"=>"Clouds", "description"=>"scattered clouds", "icon"=>"03d"}]</pre><pre>Cidade: Masallatah</pre><pre>Clima: [{"id"=>500, "main"=>"Rain", "description"=>"light rain", "icon"=>"10d"}]</pre><pre>Cidade: Al Khums</pre><pre>Clima: [{"id"=>804, "main"=>"Clouds", "description"=>"overcast clouds", "icon"=>"04d"}]</pre><pre>Cidade: Zlitan</pre><pre>Clima: [{"id"=>804, "main"=>"Clouds", "description"=>"overcast clouds", "icon"=>"04d"}]</pre><pre>Cidade: Birkirkara</pre><pre>Clima: [{"id"=>802, "main"=>"Clouds", "description"=>"scattered clouds", "icon"=>"03d"}]</pre><pre>Cidade: Ragusa</pre><pre>Clima: [{"id"=>801, "main"=>"Clouds", "description"=>"few clouds", "icon"=>"02d"}]</pre><pre>Cidade: Pozzallo</pre><pre>Clima: [{"id"=>801, "main"=>"Clouds", "description"=>"few clouds", "icon"=>"02d"}]</pre><pre>Cidade: Modica</pre><pre>Clima: [{"id"=>802, "main"=>"Clouds", "description"=>"scattered clouds", "icon"=>"03d"}]</pre><pre>Cidade: Rosolini</pre><pre>Clima: [{"id"=>802, "main"=>"Clouds", "description"=>"scattered clouds", "icon"=>"03d"}]</pre></li>
+</ul>
+</div><div class="modal-footer">
+<span class="modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons">close</i></span>
+</div>
+</div><div id="g0f0s5" class="modal modal-fixed-footer">
+<div class="modal-content"><div class="chip"><i class="material-icons rotate-45">label</i>@weather</div><h5>Buscar cidades ao redor (1.225s)</h5>
+features/specs/weather.feature:56
+<ul class="collection stepList"><li class="collection-item step passed">
+<b>Dado </b> que faço um GET na API find com os dados abaixo: (1.225s)<br/>| lat | 55.5 | 
+<br/>| lon | 37.5 | 
+<br/>| cnt | 10 | 
+</li>
+<li class="collection-item step passed">
+<b>Quando </b> o código de resposta HTTP é igual a &quot;200&quot; (0.000s)</li>
+<li class="collection-item step passed">
+<b>Então </b> o body de resposta deve conter 4 atributos (0.000s)</li>
+<li class="collection-item step passed">
+<b>E </b> vejo as informaçoes sobre o clima (0.000s)<pre>Cidade: Newtonhill</pre><pre>Clima: [{"id"=>311, "main"=>"Drizzle", "description"=>"rain and drizzle", "icon"=>"09d"}]</pre><pre>Cidade: Stonehaven</pre><pre>Clima: [{"id"=>311, "main"=>"Drizzle", "description"=>"rain and drizzle", "icon"=>"09d"}]</pre><pre>Cidade: Portlethen</pre><pre>Clima: [{"id"=>311, "main"=>"Drizzle", "description"=>"rain and drizzle", "icon"=>"09d"}]</pre></li>
+</ul>
+</div><div class="modal-footer">
+<span class="modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons">close</i></span>
+</div>
+</div><div id="g0f0s6" class="modal modal-fixed-footer">
+<div class="modal-content"><div class="chip"><i class="material-icons rotate-45">label</i>@weather</div><h5>Buscar mais de uma cidade (1.225s)</h5>
+features/specs/weather.feature:67
+<ul class="collection stepList"><li class="collection-item step passed">
+<b>Dado </b> que faço um GET na API group com os dados abaixo: (1.224s)<br/>| id | 524901 | 
+<br/>| id | 703448 | 
+<br/>| id | 2643743 | 
+<br/>| units | metric | 
+</li>
+<li class="collection-item step passed">
+<b>Quando </b> o código de resposta HTTP é igual a &quot;200&quot; (0.000s)</li>
+<li class="collection-item step passed">
+<b>Então </b> o body de resposta deve conter 2 atributos (0.000s)</li>
+<li class="collection-item step passed">
+<b>E </b> vejo as informaçoes sobre o clima (0.000s)<pre>Cidade: Moscow</pre><pre>Clima: [{"id"=>800, "main"=>"Clear", "description"=>"clear sky", "icon"=>"01n"}]</pre><pre>Cidade: Kiev</pre><pre>Clima: [{"id"=>800, "main"=>"Clear", "description"=>"clear sky", "icon"=>"01n"}]</pre><pre>Cidade: London</pre><pre>Clima: [{"id"=>701, "main"=>"Mist", "description"=>"mist", "icon"=>"50d"}, {"id"=>300, "main"=>"Drizzle", "description"=>"light intensity drizzle", "icon"=>"09d"}]</pre></li>
+</ul>
+</div><div class="modal-footer">
+<span class="modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons">close</i></span>
+</div>
+</div>
+<script type="text/javascript">
+$(document).ready(function () {$('#g0f0s0').modal();$('#g0f0s1').modal();$('#g0f0s2').modal();$('#g0f0s3').modal();$('#g0f0s4').modal();$('#g0f0s5').modal();$('#g0f0s6').modal();$('#g0f0s7').modal();});
+</script>
+<main class="brown lighten-5">
+<div class="row"><div id="overview" class="col s12 brown lighten-5">
+<div class="row">
+<div class="col m4 s12">
+<canvas id="featuresDoughnut" width="400" height="400"></canvas>
+<table id="metaDataFeatures" class="bordered">
+<tbody></tbody>
+</table>
+</div><div class="col m4 s12">
+<canvas id="scenariosDoughnut" width="400" height="400"></canvas>
+<table id="metaDataScenarios" class="bordered">
+<tbody></tbody>
+</table>
+</div><div class="col m4 s12">
+<table id="metaData" class="bordered">
+<tbody>
+<tr><th>Total Time</th><td>8.422s</td></tr><tr>
+<th>Project name</th>
+<td>Zé Delivery</td>
+</tr><tr>
+<th>Platform</th>
+<td>PROD</td>
+</tr><tr>
+<th>Report generated</th>
+<td>2019-09-04 14:33:02 UTC</td>
+</tr></tbody>
+</table>
+</div>
+</div></div><div id="features" class="col s12 brown lighten-5 white-text">
+<ul class="featureList collapsible popout" data-collapsible="expandable">
+<li class="feature working">
+<div class="collapsible-header brown lighten-1 waves-effect waves-light">
+<i class="material-icons">featured_play_list</i>
+<b>Funcionalidade</b>&nbsp;Weather&nbsp;(8.422s)
+</div><div class="collapsible-body brown lighten-4">
+<ul class="collection scenarioList"><li class="collection-item scenario passed">
+<a class="waves-effect waves-light modal-trigger white-text" href="#g0f0s0">
+<b>Cenário</b> Buscar cidade pelo nome&nbsp;(1.296s)
+</a>
+</li><li class="collection-item scenario passed">
+<a class="waves-effect waves-light modal-trigger white-text" href="#g0f0s1">
+<b>Cenário</b> Buscar cidade por ID&nbsp;(1.099s)
+</a>
+</li><li class="collection-item scenario passed">
+<a class="waves-effect waves-light modal-trigger white-text" href="#g0f0s2">
+<b>Cenário</b> Buscar cidade por coordenadas&nbsp;(1.226s)
+</a>
+</li><li class="collection-item scenario passed">
+<a class="waves-effect waves-light modal-trigger white-text" href="#g0f0s3">
+<b>Cenário</b> Buscar cidade por zip code&nbsp;(1.124s)
+</a>
+</li><li class="collection-item scenario passed">
+<a class="waves-effect waves-light modal-trigger white-text" href="#g0f0s4">
+<b>Cenário</b> Buscar cidades dentro de uma área&nbsp;(1.227s)
+</a>
+</li><li class="collection-item scenario passed">
+<a class="waves-effect waves-light modal-trigger white-text" href="#g0f0s5">
+<b>Cenário</b> Buscar cidades ao redor&nbsp;(1.225s)
+</a>
+</li><li class="collection-item scenario passed">
+<a class="waves-effect waves-light modal-trigger white-text" href="#g0f0s6">
+<b>Cenário</b> Buscar mais de uma cidade&nbsp;(1.225s)
+</a>
+</li></ul>
+</div>
+</li>
+</ul></div><div id="summary" class="col s12 brown lighten-5">
+<table id="summaryTable" class="bordered brown lighten-1 white-text" width="100%">
+<thead>
+<tr>
+<th class="hide-on-small-only">Feature</th>
+<th>Scenario</th>
+<th class="hide">Tags</th>
+<th>Status</th>
+<th class="hide-on-small-only">Error</th>
+</tr>
+</thead>
+<tbody><tr class="passed">
+<td class="hide-on-small-only">
+Weather
+</td><td class="hoverable">
+<a class="modal-trigger white-text" href="#g0f0s0">Buscar cidade pelo nome</a>
+</td><td class="hide">
+@weather. 
+</td><td class="uppercase">
+passed
+</td><td class="hide-on-small-only"></td></tr>
+<tr class="passed">
+<td class="hide-on-small-only">
+Weather
+</td><td class="hoverable">
+<a class="modal-trigger white-text" href="#g0f0s1">Buscar cidade por ID</a>
+</td><td class="hide">
+@weather. 
+</td><td class="uppercase">
+passed
+</td><td class="hide-on-small-only"></td></tr>
+<tr class="passed">
+<td class="hide-on-small-only">
+Weather
+</td><td class="hoverable">
+<a class="modal-trigger white-text" href="#g0f0s2">Buscar cidade por coordenadas</a>
+</td><td class="hide">
+@weather. 
+</td><td class="uppercase">
+passed
+</td><td class="hide-on-small-only"></td></tr>
+<tr class="passed">
+<td class="hide-on-small-only">
+Weather
+</td><td class="hoverable">
+<a class="modal-trigger white-text" href="#g0f0s3">Buscar cidade por zip code</a>
+</td><td class="hide">
+@weather. 
+</td><td class="uppercase">
+passed
+</td><td class="hide-on-small-only"></td></tr>
+<tr class="passed">
+<td class="hide-on-small-only">
+Weather
+</td><td class="hoverable">
+<a class="modal-trigger white-text" href="#g0f0s4">Buscar cidades dentro de uma área</a>
+</td><td class="hide">
+@weather. 
+</td><td class="uppercase">
+passed
+</td><td class="hide-on-small-only"></td></tr>
+<tr class="passed">
+<td class="hide-on-small-only">
+Weather
+</td><td class="hoverable">
+<a class="modal-trigger white-text" href="#g0f0s5">Buscar cidades ao redor</a>
+</td><td class="hide">
+@weather. 
+</td><td class="uppercase">
+passed
+</td><td class="hide-on-small-only"></td></tr>
+<tr class="passed">
+<td class="hide-on-small-only">
+Weather
+</td><td class="hoverable">
+<a class="modal-trigger white-text" href="#g0f0s6">Buscar mais de uma cidade</a>
+</td><td class="hide">
+@weather. 
+</td><td class="uppercase">
+passed
+</td><td class="hide-on-small-only"></td></tr>
+</tbody>
+</table></div><div id="errors" class="col s12 brown lighten-5">
+<ul class="errorList collapsible popout" data-collapsible="expandable"></ul></div>
+</div>
+</main><footer class="page-footer brown lighten-4">
+<div class="footer-copyright brown lighten-1">
+<div class="container">
+Happy Reporting!
+<a class="white-text text-lighten-4 right" href="https://reportbuilder.rajatthareja.com">Generated by Report Builder</a>
+</div>
+</div>
+</footer><script type="text/javascript" src="https://cdn.rawgit.com/rajatthareja/ReportBuilder/v1.8/js/report.builder.min.js"></script></body>
+</html>

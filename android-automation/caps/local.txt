@@ -1,0 +1,11 @@
+[caps]
+  deviceName = "Android"
+  platformName = "Android"
+  app = "../android-automation/features/support/base.apk"
+  newCommandTimeout = "3600"
+  NO_RESET = false
+  unicodeKeyboard = "true"
+  locale = "br"
+  language = "pt"
+  autoGrantPermissions = "true"
+  autoAcceptAlerts = "true"
