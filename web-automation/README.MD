@@ -10,7 +10,7 @@ Obs: Não foi possível finalizar devido a validação do telefone
 
 <p>1- Clonar projeto</p>
 
-> git clone https://github.com/zedelivery.git
+> git clone https://github.com/luisasauerbronn16/zedelivery.git
 
 <p>2- Instalar o bundler </p>
 
